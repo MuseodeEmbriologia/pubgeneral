@@ -367,25 +367,7 @@
 </head>
 
 <body>
-<!--
-  <div id="registro-container">
-    <h2>Registro de acceso</h2>
 
-    <form id="registroForm">
-      <input type="text" id="nombre" placeholder="Tu nombre" required><br><br>
-
-      <select id="ocupacion" required>
-        <option value="">¿A qué te dedicas?</option>
-        <option value="Estudiante">Estudiante</option>
-        <option value="Profesional de salud">Profesional de salud</option>
-        <option value="Docente">Docente</option>
-        <option value="Público general">Público general</option>
-      </select><br><br>
-
-      <button type="submit">Entrar</button>
-    </form>
-    </div>
--->
 <div id="contenidoAR">
   <!-- MENÚ HAMBURGUESA -->
   <div class="hamburger-menu">
@@ -421,6 +403,8 @@
     <h3>Universidad Autónoma de Chihuahua</h3>
     <p>La embriología es el estudio del desarrollo de un embrión desde la fecundación del óvulo hasta la octava semana de gestación. Este campo científico es fundamental para comprender cómo se forman los organismos y las estructuras celulares básicas que dan origen a la vida.</p>
     <p>Con esta página usted podrá obtener una experiencia de realidad aumentada donde podrá ver modelos 3D animados de la espermatogénesis. Simplemente inicie la cámara y apunte al marcador Hiro para visualizar el contenido.</p>
+    <p>Esta página es una versión pública y más general, para más información viste la página oficial del museo: </p>
+    <p>https://andresandazola.github.io/MuseoEmbriologiaUACH/index_estudiantes.html</p>
 
     <button id="start-ar">Iniciar AR</button>
   </div>
@@ -735,47 +719,6 @@ abririnf2.addEventListener('click', (e) => {
     });
   </script>
   </div>
-  <!--
-   <script type="module">
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.9.0/firebase-app.js";
-  import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/12.9.0/firebase-firestore.js";
-
-const firebaseConfig = {
-  apiKey: "AIzaSyD9knh7Wi-xcRKytqFHfLeMbQyDDJ_cMEA",
-  authDomain: "museoembrio.firebaseapp.com",
-  projectId: "museoembrio",
-  storageBucket: "museoembrio.firebasestorage.app",
-  messagingSenderId: "32575409510",
-  appId: "1:32575409510:web:7dcf83909a72b971b80ca7",
-  measurementId: "G-DBQQWGHKZK"
-};
-
-const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
-
-document.getElementById("registroForm").addEventListener("submit", async (e) => {
-  e.preventDefault();
-
-  const nombre = document.getElementById("nombre").value;
-  const ocupacion = document.getElementById("ocupacion").value;
-
-  try {
-    await addDoc(collection(db, "accesos"), {
-      nombre: nombre,
-      ocupacion: ocupacion,
-      fecha: new Date(),
-      dispositivo: navigator.userAgent
-    });
-
-    document.getElementById("registro-container").style.display = "none";
-    document.getElementById("contenidoAR").style.display = "block";
-
-  } catch (error) {
-    console.error("Error:", error);
-  }
-});
- </script>
-  -->
 </body>
 </html>
 
